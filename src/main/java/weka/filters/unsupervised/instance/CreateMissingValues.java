@@ -1,4 +1,4 @@
-package weka.filters.supervised.instance;
+package weka.filters.unsupervised.instance;
 
 import java.util.Collections;
 import java.util.Random;
@@ -81,6 +81,10 @@ public class CreateMissingValues extends SimpleBatchFilter {
 		result.add( "" + getProbMissing() );
 		Collections.addAll(result, super.getOptions());
 	    return result.toArray(new String[result.size()]);
+	}
+	
+	public static void main(String[] argv) {
+		runFilter(new CreateMissingValues(), argv);
 	}
 
 	
